@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 375px;
+    height: 915px;
+    position: relative;
+    
+}
+
+.topo{
+    height: 80px;
+    width: 375px;
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 22px;
+    padding-right: 22px;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.conteudo{
+    margin: 80px 0;
+    background-color: red;
+}
+
+.bottom{
+    height: 80px;
+    width: 375px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 18px;
+    padding-right: 26px;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.logo{
+    height: 53px;
+    width: 75px;
+}
+
+.people{
+    height: 42px;
+    width: 40px;
+}
+
+::placeholder{
+    font-style: italic;
+}
+
+input{
+    border: transparent;
+}
+
+.mensagem{
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF;
+    width: 375px;
+    height: 40px;
+    margin: 2px 0;
+    display: flex;
+    align-items: center;
+}
+
+.mensagem.status{
+    background-color: #DCDCDC;
+}
+
+.mensagem.reservada{
+    background-color: #FFDEDE;
+}
+
+@media (max-width: 375px) {
+   
+    .container, .bottom, .topo{
+        width: 100%;
+    }
+    
+    }
