@@ -6,7 +6,49 @@
 body{
     display: flex;
     justify-content: center;
-    
+    position: relative;
+}
+
+.entrada{
+    width: 375px;
+    height: 915px;
+    position: fixed;
+    background-color:#FFFFFF;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 72px;
+}
+
+.desativado{
+    display: none;
+}
+
+.usuario{
+    margin-top: 94px;
+    width: 261px;
+    height: 54px;
+    border: 1px solid #D7D7D7;
+    margin-bottom: 15px;
+}
+
+.entrada ::placeholder{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: normal;
+    font-style: normal;
+    color: #AEAEAE;
+    font-size: 18px;
+}
+
+.entrada button{
+    width: 109px;
+    height: 45px;
+    background-color: #E7E7E7;
+    border-radius: 9px;
+    border: transparent;
+    color: #696969;
 }
 .container{
     display: flex;
@@ -15,7 +57,35 @@ body{
     width: 375px;
     height: 915px;
     position: relative;
-    
+    background-color: #E5e5e5;
+}
+
+
+.menu-envio{
+    width: 259px;
+    height: 100%;
+    position: absolute;
+    background-color:#FFFFFF;
+    z-index: 1;
+    right: 0;
+    box-shadow: 100px 100px 100px 600px rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.titulo{
+    width: 259px;
+    height: 89px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.titulo2{
+    width: 259px;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .topo{
@@ -29,11 +99,13 @@ body{
     padding-right: 22px;
     align-items: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    background-color: #FFFFFF;
 }
 
 .conteudo{
     margin: 80px 0;
-    background-color: red;
+    overflow: auto;
+
 }
 
 .bottom{
@@ -47,6 +119,22 @@ body{
     padding-left: 18px;
     padding-right: 26px;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    background-color: #FFFFFF;
+}
+
+
+li{
+    display: flex;
+    justify-content: space-between;
+}
+
+li>ion-icon {
+    color: #28BB25;
+    opacity:0;
+}
+
+li>ion-icon.selecionado{
+    opacity: 1;
 }
 
 .logo{
@@ -75,13 +163,14 @@ input{
     margin: 2px 0;
     display: flex;
     align-items: center;
+    border-radius: 2px;
 }
 
 .mensagem.status{
     background-color: #DCDCDC;
 }
 
-.mensagem.reservada{
+.mensagem.private_message{
     background-color: #FFDEDE;
 }
 
@@ -91,4 +180,8 @@ input{
         width: 100%;
     }
     
-    }
+}
+
+h2{
+    font-weight: bold;
+}

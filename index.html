@@ -9,15 +9,32 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <div class="entrada">
+            <img src="./images/logo 1.png" width ="130px" height="92px">
+            <input class ="usuario" type="text" placeholder="Digite seu nome">
+            <button onclick="entrarSala()">Entrar</button>
+        </div>
             <div class="container">
+                
                 <div class="topo"> <img class="logo"src="./images/logo 1.png">        <img class="people"src="./images/Vector.png">   </div>
                 <div class="conteudo">
-                    <div class="mensagem status">entrou</div>
-                    <div class="mensagem reservada">reservadamente</div>
-                    <div class="mensagem">olá mundo</div>
                 </div>
-                <div class="bottom"> <input type="text" placeholder="Escreva aqui..."> <ion-icon class ="logo-icon"name="paper-plane-outline" onclick="ola()"></ion-icon></div>
+                <div class="bottom"> <input type="text" placeholder="Escreva aqui..."> <ion-icon class ="logo-icon"name="paper-plane-outline" onclick=""></ion-icon></div>
+                <div class="menu-envio"> 
+                    <div class="titulo"><h1>Escolha um contato para enviar mensagem:</h1></div>
+                    <ul class="participantes">
+                        <li onclick="selecionarContato(this)"><h1><ion-icon name="people"></ion-icon>Todos</h1><ion-icon name="checkmark-sharp"></ion-icon></li> 
+                        <li onclick="selecionarContato(this)"><h1><ion-icon name="person-circle"></ion-icon>João </h1><ion-icon name="checkmark-sharp"></ion-icon></li>
+                        <li onclick="selecionarContato(this)"><h1><ion-icon name="person-circle"></ion-icon>Maria</h1><ion-icon name="checkmark-sharp"></ion-icon></li>
+                    </ul>    
+                    <div class="titulo2"><h1> Escolha a visibilidade:</h1></div>
+                    <ul class="visibilidade">
+                        <li onclick ="selecionarVisibilidade(this)"><h1><ion-icon name="lock-open"></ion-icon>Público</h1><ion-icon name="checkmark-sharp"></ion-icon></li>
+                        <li onclick ="selecionarVisibilidade(this)"><h1><ion-icon name="lock-closed"></ion-icon>Privado</h1><ion-icon name="checkmark-sharp"></ion-icon></li>
+                    </ul>
+                </div>
             </div>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="script.js"></script>
         <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     </body>
