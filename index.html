@@ -16,23 +16,24 @@
         </div>
             <div class="container">
                 
-                <div class="topo"> <img class="logo"src="./images/logo 1.png">        <img class="people"src="./images/Vector.png">   </div>
+                <div class="topo"> <img class="logo"src="./images/logo 1.png">        <ion-icon size= "large"onclick="envio()" name="people"></ion-icon>  </div>
                 <div class="conteudo">
                 </div>
-                <div class="bottom"> <input class ="enviar"type="text" placeholder="Escreva aqui..."> <ion-icon class ="logo-icon"name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon></div>
-                <div class="menu-envio"> 
+                <div class="bottom"> <div class="texto"><input class ="enviar"type="text" placeholder="Escreva aqui..."> <ion-icon size ="large"class ="botao"name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon></div>
+                    <div class="envio">Enviando para Todos</div>
+                </div>
+                <div class="menu-envio desativado"> 
                     <div class="titulo"><h1>Escolha um contato para enviar mensagem:</h1></div>
                     <ul class="participantes">
-                        <li onclick="selecionarContato(this)"><h1><ion-icon name="people"></ion-icon>Todos</h1><ion-icon name="checkmark-sharp"></ion-icon></li> 
-                        <li onclick="selecionarContato(this)"><h1><ion-icon name="person-circle"></ion-icon>João </h1><ion-icon name="checkmark-sharp"></ion-icon></li>
-                        <li onclick="selecionarContato(this)"><h1><ion-icon name="person-circle"></ion-icon>Maria</h1><ion-icon name="checkmark-sharp"></ion-icon></li>
+                   
                     </ul>    
                     <div class="titulo2"><h1> Escolha a visibilidade:</h1></div>
                     <ul class="visibilidade">
-                        <li onclick ="selecionarVisibilidade(this)"><h1><ion-icon name="lock-open"></ion-icon>Público</h1><ion-icon name="checkmark-sharp"></ion-icon></li>
-                        <li onclick ="selecionarVisibilidade(this)"><h1><ion-icon name="lock-closed"></ion-icon>Privado</h1><ion-icon name="checkmark-sharp"></ion-icon></li>
+                        <li onclick ="selecionarVisibilidade(this)"><span><ion-icon name="lock-open"></ion-icon>Público</span><ion-icon class ="selecionado"name="checkmark-sharp"></ion-icon></li>
+                        <li onclick ="selecionarVisibilidade(this)"><span><ion-icon name="lock-closed"></ion-icon>Privado</span><ion-icon name="checkmark-sharp"></ion-icon></li>
                     </ul>
                 </div>
+                <div class="escuro desativado" onclick ="hide()"></div>
             </div>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="script.js"></script>
