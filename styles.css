@@ -76,6 +76,8 @@ body{
 .participantes{
     font-size: 16px;
     padding-left: 18px;
+    max-height: 400px;
+    overflow-y: scroll;
 }
 
 .visibilidade{
